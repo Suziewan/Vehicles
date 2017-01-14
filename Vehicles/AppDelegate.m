@@ -7,11 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "Vehicle.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    Vehicle *vehicle = [[Vehicle alloc]init];
+    
+    NSLog(@"Vehicle turn: %@", [Vehicle turn:700]);
+    NSLog(@"Vehicle change gears: %@", [vehicle changeGears:@"Test"]);
+    
+    NSLog(@"Vehicle make noice: %@", [vehicle makeNoise]);
+    NSLog(@"Vehicle go forward: %@", [vehicle goForward]);
+    NSLog(@"Vehicle go backward: %@", [vehicle goBackward]);
+    NSLog(@"Vehicle stop moving: %@", [vehicle stopMoving]);
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -24,7 +35,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough ap go application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
